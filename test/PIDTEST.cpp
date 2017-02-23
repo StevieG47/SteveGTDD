@@ -29,12 +29,12 @@ TEST(testPID, test_1) {
 }
 
 TEST(testPID,test_2) {
-  PID test2;
+  PIDtest A;
   EXPECT_EQ(A.DTest(), 0);  //check if getting Derivative term correctly
 }
 
 TEST(testPID,test_3) {
-  PID test3;
+  PIDtest A;
   EXPECT_EQ(A.computeTest(), 0);  //check if compute works
 }
 
