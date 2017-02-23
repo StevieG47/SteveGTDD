@@ -1,6 +1,6 @@
-# C++ Boilerplate
+# TDD Assignment
 [![Build Status](https://travis-ci.org/StevieG47/SteveGTDD.svg?branch=master)](https://travis-ci.org/StevieG47/SteveGTDD)
-[![Coverage Status](https://coveralls.io/repos/github/dpiet/cpp-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/dpiet/cpp-boilerplate?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/StevieG47/SteveGTDD/badge.svg?branch=master)](https://coveralls.io/github/StevieG47/SteveGTDD?branch=master)
 ---
 
 ## Overview
