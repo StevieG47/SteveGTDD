@@ -5,7 +5,7 @@
 
 ## Overview
 
-Simple starter C++ project with:
+TDD assignment. PID controller unit test.
 
 - cmake
 - googletest
