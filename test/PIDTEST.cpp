@@ -16,7 +16,7 @@ using std::endl;
 double PID::prevError = 0;  //previous error
 double PID::integralSum = 0;  //integral sum
 int PID::dT = 1;  //change in time
-double PID::plant = .1;  //plant. Used with u(t) to get new velocity
+double PID::plant = 0.1;  //plant. Used with u(t) to get new velocity
 double PID::Kp = 32;  //variables for the PID controller
 double PID::Ki = 17;
 double PID::Kd = 3.2;
@@ -36,6 +36,7 @@ TEST(testPID,test_2) {
 TEST(testPID,test_3) {
   PIDtest A;
   EXPECT_EQ(A.computeTest(), 0);  //check if compute works
+  A.computeTest();
 }
 
 
@@ -54,5 +55,3 @@ int main() {
   return 0;
 }
  */
-
-

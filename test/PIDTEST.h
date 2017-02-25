@@ -52,9 +52,10 @@ class PIDtest {
    * @return 0 for success, 1 for fail
    */
   double computeTest() {
-    if (test.compute(10, 0) == 52.2) {
+    if (test.compute(10, 0) > 52 && test.compute(10,0) < 53) {
       return 0;
     } else {
+      std::cout<<"The output is "<<test.compute(10, 0)<<std::endl;
       return 1;
     }
   }

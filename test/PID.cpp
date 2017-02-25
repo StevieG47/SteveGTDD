@@ -13,7 +13,7 @@
  * @return error, the difference of target - actual
  */
 double PID::getError(double setV, double actualV) {
-  return 999;
+  return (setV-actualV);
 
 }
 
@@ -23,7 +23,7 @@ double PID::getError(double setV, double actualV) {
  * @return The proportional term P
  */
 double PID::Pterm(double error, double Kp) {
-  return 999;
+  return (error*Kp);
 
 }
 
@@ -33,8 +33,8 @@ double PID::Pterm(double error, double Kp) {
  * @return The integral term I
  */
 double PID::Iterm(double error, double Ki, int dT, double integralSum) {
-  return 999;
-
+  integralSum+=error*dT;
+  return (Ki*integralSum);
 }
 
 /**
@@ -43,7 +43,7 @@ double PID::Iterm(double error, double Ki, int dT, double integralSum) {
  * @return The derivative term D
  */
 double PID::Dterm(double error, double prevError, double Kd, int dT) {
-  return 999;
+    return (Kd*((error-prevError)/dT));
 }
 
 /**
@@ -52,7 +52,8 @@ double PID::Dterm(double error, double prevError, double Kd, int dT) {
  * @return control variable u
  */
 double PID::getControl(double Pterm, double Iterm, double Dterm) {
-  return 999;
+  return (Pterm+Iterm+Dterm);
+
 }
 
 /**
@@ -61,16 +62,13 @@ double PID::getControl(double Pterm, double Iterm, double Dterm) {
  * @return new velocity
  */
 double PID::compute(double setV, double actualV) {
-  return 999;
+  double error=getError(setV, actualV);
+  double pterm=Pterm(error, Kp);
+  double iterm=Iterm(error, Ki, dT, integralSum);
+  double dterm=Dterm(error, prevError, Kd, dT);
+  double out=getControl(pterm, iterm, dterm);
+  //prevError=error;
+
+  return (out*plant);
 
 }
-
-
-
-
-
-
-
-
-
-
